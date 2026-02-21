@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibrio en el Desarrollo de Software</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --accent: #3b82f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Contenedor que simula un celular en Desktop */
+        .phone-container {
+            width: 100%;
+            max-width: 450px;
+            background-color: var(--white);
+            min-height: 100vh;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--white);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .category-tag {
+            background-color: #dbeafe;
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 15px;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: var(--secondary);
+        }
+
+        .author-info img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: #ddd;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            border-radius: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 16px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        .highlight-card {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 30px 0 15px 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background-color: var(--primary);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .stat-box {
+            background-color: #eff6ff;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-box span {
+            display: block;
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        .stat-box label {
+            font-size: 12px;
+            color: var(--secondary);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Animación de entrada */
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        <header>
+            <span class="category-tag">Ingeniería de Software</span>
+            <h1>Herramientas vs. Fundamentos</h1>
+            <h2>Presentado por: yeison ortiz - jaider luiz cardales pinto - Viger castilla G - Jhonger </h2>
+            <div class="author-info">
+                <div style="width: 30px; height: 30px; background: #2563eb; border-radius: 50%; margin-right: 10px;"></div>
+                <span>Por Senior Dev • 5 min lectura</span>
+            </div>
+        </header>
+
+        <div class="content fade-in">
+            <div class="hero-image">
+                <h3>"La maestría no está en el martillo, sino en entender cómo se sostiene la casa."</h3>
+            </div>
+
+            <p>En el desarrollo moderno de software, surge una duda vital: ¿Basta con dominar frameworks para ser un profesional completo? El mercado actual valora la rapidez, y herramientas como <strong>React, Angular o Spring Boot</strong> permiten entregar resultados en tiempo récord.</p>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span>Frameworks</span>
+                    <label>Productividad</label>
+                </div>
+                <div class="stat-box">
+                    <span>Fundamentos</span>
+                    <label>Adaptabilidad</label>
+                </div>
+            </div>
+
+            <h2>El Valor de las Herramientas</h2>
+            <p>A corto plazo, dominar estas herramientas es la puerta de entrada al mundo laboral. Los frameworks ofrecen estructuras predefinidas y soluciones probadas que permiten a las empresas reducir costos y tiempos de desarrollo.</p>
+
+            <div class="highlight-card">
+                "Depender únicamente de una herramienta es ponerle fecha de caducidad a tu carrera profesional."
+            </div>
+
+            <h2>El Riesgo de la Superficialidad</h2>
+            <p>Las tecnologías cambian. Un framework que hoy es estándar puede ser obsoleto mañana. Cuando un profesional no entiende la base, se vuelve dependiente de tutoriales y queda bloqueado ante cambios de arquitectura o errores complejos.</p>
+
+            <h2>El Poder de los Fundamentos</h2>
+            <p>Comprender <strong>estructuras de datos, algoritmos y paradigmas</strong> proporciona una base sólida. Entender cómo funciona JavaScript internamente (el Event Loop o la asincronía) es lo que diferencia a un programador de un verdadero ingeniero.</p>
+            
+            <p>Los fundamentos permiten:</p>
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: #334155;">
+                <li>Resolución de problemas de raíz.</li>
+                <li>Escalabilidad y eficiencia real.</li>
+                <li>Toma de decisiones técnicas justificadas.</li>
+            </ul>
+
+            <h2>La Sinergia Perfecta</h2>
+            <p>No se trata de elegir uno, sino de equilibrar ambos. Las herramientas aportan <strong>velocidad</strong>; los fundamentos aportan <strong>criterio</strong>. El perfil más valorado hoy es el "Ingeniero T-Shaped": profundo conocimiento en fundamentos y habilidad práctica en herramientas modernas.</p>
+
+            <div style="text-align: center;">
+                <a href="#" class="cta-button">Profundizar Conocimientos</a>
+            </div>
+        </div>
+
+        <footer>
+            <p style="color: #94a3b8; font-size: 14px;">© 2024 Guía de Desarrollo Profesional</p>
+            <p style="color: #64748b; font-size: 12px;">Construido para desarrolladores con visión de futuro.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
